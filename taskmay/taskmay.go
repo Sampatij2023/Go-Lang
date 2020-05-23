@@ -1,5 +1,5 @@
 // Package may tells the user task of the may.
-package TaskMay
+package taskmay
 
 import "fmt"
 
