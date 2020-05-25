@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("Enter the index which is to be deleted")
 	fmt.Scanln(&del)
 	if(del<=n && del>=0){
-		newArray :=deleteArray(mySlice, del)
+		newArray :=deleteIndexInArray(mySlice, del)
 		fmt.Println("My array after deleting the index element")
 		fmt.Println(newArray)
 	}else{
@@ -24,7 +24,7 @@ func main() {
 
 }
 
-func deleteArray(A []int, k int)[]int {
+func deleteIndexInArray(A []int, k int)[]int {
 	A = append(A[:k], A[(k+1):]...)
 	return A;
 }
