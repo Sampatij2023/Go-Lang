@@ -15,12 +15,16 @@ func main() {
 	var del int
 	fmt.Println("Enter the index which is to be deleted")
 	fmt.Scanln(&del)
-
-	updateArray(mySlice, del)
+	if(del<=n && del>=0){
+		newArray :=deleteArray(mySlice, del)
+		fmt.Println("My array after deleting the index element")
+		fmt.Println(newArray)
+	}else{
+		fmt.Println("index is out of range of the array")}
 
 }
 
-func updateArray(A []int, k int) {
+func deleteArray(A []int, k int)[]int {
 	A = append(A[:k], A[(k+1):]...)
-	fmt.Println(" my slice after removing the element is :", A)
+	return A;
 }
