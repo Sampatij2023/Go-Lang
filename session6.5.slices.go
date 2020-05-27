@@ -15,16 +15,30 @@ func main() {
 	var del int
 	fmt.Println("Enter the index which is to be deleted")
 	fmt.Scanln(&indexOfElement)
-	if(indexOfElement<=n && indexOfElement>=0){
+	if(indexOfElement<=(n-1) && indexOfElement>=1){
 		newArray :=deleteElementInSlice(mySlice, indexOfElement)
 		fmt.Println("My array after deleting the index element")
 		fmt.Println(newArray)
-	}else{
-		fmt.Println("index is out of range of the array")}
+	}else if (indexOfElement == 0 || indexOfElement == n{
+		newArray :=deleteBoundaryElementInSlice(mySlice, indexOfElement)
+		fmt.Println("My array after deleting the index element")
+		fmt.Println(newArray)
+	}
+	esle{
+		fmt.Println("index is out of range of the array")
+	}
 
 }
 
 func deleteElementInSlice(A []int, k int)[]int {
 	A = append(A[:k], A[(k+1):]...)
 	return A;
+}
+func deleteBoundaryElementInSlice(A []int, k int)[]int {
+	if(k==0){	
+		return A[1:];
+	}
+	else{
+		return A[:k];
+	}
 }
