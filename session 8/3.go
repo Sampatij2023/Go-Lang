@@ -14,13 +14,13 @@ func main(){
 		age: 34,
 		address: []string{"Mumbai","pune"},
 	}
-	person1:=person{
+	person2:=person{
 		firstName: "Pawn",
 		lastName: "chamn",
 		age: 34,
 		address: []string{"Mumbai","pune"},
 	}
-	person1:=person{
+	person3:=person{
 		firstName: "Pan",
 		lastName: "chan",
 		age: 34,
@@ -29,6 +29,12 @@ func main(){
 	fmt.Println("Before calling:" , person1)
 	modifyPerson(person1)
 	fmt.Println("after calling:" , person1)
+	fmt.Println("Before calling:" , person2)
+	modifyPerson(person1)
+	fmt.Println("after calling:" , person2)
+	fmt.Println("Before calling:" , person3)
+	modifyPerson(person1)
+	fmt.Println("after calling:" , person3)
 }
 var allPerson[]string
 allPerson=[]person{person1,person2,person3}
