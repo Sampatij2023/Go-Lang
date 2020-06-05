@@ -97,7 +97,7 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 	//random number generation
 	randomSecretNumber := rand.Intn(50) + 1
-	fmt.Println(randomSecretNumber)
+// 	fmt.Println(randomSecretNumber)
 
 	fmt.Println("Guess a number between 1 and 50")
 	fmt.Println("Please type your guessed number")
