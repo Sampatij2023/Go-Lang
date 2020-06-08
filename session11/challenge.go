@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Enter the directory name of the folder in which you want to see the list of all files and folders")
 	var folderName string
 	_, erro := fmt.Scan(&folderName)
 	// reader := bufio.NewReader(os.Stdin)
