@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"log"
 	"os"
@@ -9,15 +8,15 @@ import (
 )
 
 func main() {
-// 	var folderName string
-// 	// _, err := fmt.Scan(&folderName)
-// 	reader := bufio.NewReader(os.Stdin)
-// 	input, erro := reader.ReadString('\n')
-// 	// dir := "" + input
-// 	if erro != nil {
-// 		log.Fatal("Error Occured ", erro)
-// 	}
-// 	folderName = ("" + input)
+	var folderName string
+	_, erro := fmt.Scan(&folderName)
+	// reader := bufio.NewReader(os.Stdin)
+	// input, erro := reader.ReadString('\n')
+	// // dir := "" + input
+	if erro != nil {
+		log.Fatal("Error Occured ", erro)
+	}
+	// folderName = ("" + input)
 	// files, err := ioutil.ReadDir("movie")
 	// if err != nil {
 	// 	log.Fatal(err)
@@ -26,7 +25,7 @@ func main() {
 	// for _, f := range files {
 	// 	fmt.Println(f.Name())
 	// }
-	err := filepath.Walk("movie",
+	err := filepath.Walk(folderName,
 		func(path string, info os.FileInfo, err error) error {
 			if err != nil {
 				return err
