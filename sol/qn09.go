@@ -34,7 +34,7 @@ func Eat(fridge Refrigerator) error {
 	if err != nil {
 		return err
 	}
-	defer fmt.Println("Eating", food)
+	 fmt.Println("Eating", food)
 
 	return nil
 }
