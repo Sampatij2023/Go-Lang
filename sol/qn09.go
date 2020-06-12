@@ -29,12 +29,13 @@ func (r Refrigerator) FindFood(food string) (Food, error) {
 // be using either one.
 func Eat(fridge Refrigerator) error {
 	fridge.Open()
+	defer fridge.Close()
 	food, err := fridge.FindFood("bananas")
 	if err != nil {
 		return err
 	}
-	fmt.Println("Eating", food)
-	defer fridge.Close()
+	defer fmt.Println("Eating", food)
+
 	return nil
 }
 
